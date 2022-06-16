@@ -8,8 +8,8 @@ function btn_click(){
     window.alert('ボタンをクリックしました')
 }
 
-window.onload = function(){
-    document.getElementById('btn').onclick = function(){
+document.addEventListener('DOMContentLoaded',function(){
+    document.getElementById('btn').addEventListener('click',function(){
         window.alert('ボタンをクリックしました');
-    };
-};
+    },false);
+},false);
