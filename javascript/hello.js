@@ -13,3 +13,29 @@ document.addEventListener('DOMContentLoaded',function(){
         window.alert('ボタンをクリックしました');
     },false);
 },false);
+
+document.addEventListener('DOMContentLoaded',function(){
+    var list = document.getElementById('list');
+    var attrlist = list.attributes
+    for(var item of attrlist){
+        console.log(item.name + ":" + item.value);
+    }
+
+},false);
+
+document.addEventListener('DOMContentLoaded',() => {
+    getRadioValue = (name) => {
+        result = "";
+        var elems = document.getElementsByName(name);
+        for(var elem of elems){
+            if(elem.checked){
+                result = elem.value;
+                break;
+            }
+        }
+        return result;
+    }
+    document.getElementById('btn2').addEventListener('click',() => {
+        window.alert(getRadioValue('food'));        
+    },false);
+},false);
