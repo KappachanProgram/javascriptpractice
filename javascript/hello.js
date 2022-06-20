@@ -38,4 +38,14 @@ document.addEventListener('DOMContentLoaded',() => {
     document.getElementById('btn2').addEventListener('click',() => {
         window.alert(getRadioValue('food'));        
     },false);
+    
+    elem = document.getElementById('mouse');
+    elem.addEventListener('mouseover',() => {
+        this.getElementById('mouse').className = 'h1';
+    },false);
+
+    elem.addEventListener('mouseout',() => {
+        this.className ='';
+    },false);
 },false);
+
